@@ -56,10 +56,10 @@ Open postman and then you can import the file from the folder postman `Api Emplo
 📌SCREENSHOTS OF THE APP:
 
 ### App Homepage:
-![Home](./Screenshots/home.png)
+![Home](./Screenshots/Home.png)
 
 ### Create Employee
 ![Create](./Screenshots/Form.png)
 
 ### API Testing
-![Postman](./Screenshots/postman.png)
+![Postman](./Screenshots/Postman.png)
