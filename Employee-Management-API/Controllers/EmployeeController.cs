@@ -60,7 +60,6 @@ namespace Employee_Management_API.Controllers
             {
                 return NotFound();
             }
-
             return Ok(employeeModel.ToEmployeeDto());
         }
 
