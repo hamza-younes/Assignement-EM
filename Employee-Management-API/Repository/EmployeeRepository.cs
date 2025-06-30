@@ -39,7 +39,6 @@ namespace Employee_Management_API.Repository
 
             _context.Employees.Remove(employeeModel);
             await _context.SaveChangesAsync();
-
             return employeeModel;
         }
 
