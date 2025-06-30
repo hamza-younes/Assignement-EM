@@ -1,0 +1,50 @@
+<div class="container mt-4 px-2 px-sm-3 px-md-5">
+  <h2 class="mb-4 text-center">{{ isEditMode ? 'Edit Employee' : 'Add New Employee' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-3">
+
+    <div class="row g-3 mb-3">
+      <div class="col-12 col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" formControlName="email" id="email">
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-12 col-md-6">
+        <label for="jobTitle" class="form-label">Job Title</label>
+        <select class="form-select" formControlName="jobTitle" id="jobTitle">
+          <option value="" disabled>Select a job title</option>
+          <option *ngFor="let title of jobTitles" [value]="title">{{ title }}</option>
+        </select>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label for="department" class="form-label">Department</label>
+        <select class="form-select" formControlName="department" id="department">
+          <option value="" disabled>Select a department</option>
+          <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="dateOfJoining" class="form-label">Date of Joining</label>
+      <input type="date" class="form-control" formControlName="dateOfJoining" id="dateOfJoining">
+    </div>
+
+    <div class="form-buttons d-flex justify-content-sm-end gap-2 mt-4">
+      <button class="btn btn-success" type="submit" [disabled]="form.invalid">Submit</button>
+      <a class="btn btn-secondary" routerLink="/">Cancel</a>
+    </div>
+  </form>
+</div>

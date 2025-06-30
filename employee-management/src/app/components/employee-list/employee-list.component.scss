@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.card-body {
+  overflow-x: auto;
+
+  .table {
+    table-layout: auto;
+    width: 100%;
+  }
+    td.text-center {
+      white-space: nowrap;
+    }
+  td {
+      white-space: normal;
+      word-break: break-word;
+      padding: 0.5rem;
+      font-size: 0.85rem;   
+  }
+  
+  @media (max-width: 576px) {
+  .table th,
+  .table td {
+    font-size: 0.75rem;
+  }
+
+  td.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+}
+}

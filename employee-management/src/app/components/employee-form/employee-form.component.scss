@@ -1,0 +1,35 @@
+form {
+  .form-control,
+  .form-select {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+    }
+
+      .form-buttons {
+      flex-direction: column;
+    }
+
+    .btn {
+      font-size: 0.85rem;
+      padding: 0.5rem;
+    }
+
+    
+  }
+}

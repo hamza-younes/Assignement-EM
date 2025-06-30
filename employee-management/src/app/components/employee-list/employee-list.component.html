@@ -1,0 +1,46 @@
+<div class="container my-5">
+  <h3 class="text-center fw-bold mb-5 text-dark">Employee Management</h3>
+
+  <div class="card shadow-sm border">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center py-2">
+      <span class="fw-semibold text-uppercase small text-muted">Employee List</span>
+      <a class="btn btn-primary btn-sm" routerLink="/add" aria-label="Add Employee">
+        <i class="bi bi-person-plus-fill me-1"></i> Add Employee
+      </a>
+    </div>
+
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mb-0 align-middle">
+          <thead class="table-light">
+            <tr class="text-uppercase text-secondary small">
+              <th scope="col">Full Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Department</th>
+              <th scope="col">Date of Joining</th>
+              <th scope="col" class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employees">
+              <td>{{ emp.fullName }}</td>
+              <td>{{ emp.email }}</td>
+              <td>{{ emp.jobTitle }}</td>
+              <td>{{ emp.department }}</td>
+              <td>{{ emp.dateOfJoining | date:'mediumDate' }}</td>
+              <td class="text-center">
+                <a class="btn btn-sm btn-outline-warning me-1" [routerLink]="['/edit', emp.id]" aria-label="Edit Employee">
+                  <i class="bi bi-pencil-square"></i> Edit
+                </a>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteEmployee(emp.id)" aria-label="Delete Employee">
+                  <i class="bi bi-trash3"></i> Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
