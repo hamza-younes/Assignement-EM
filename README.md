@@ -59,7 +59,7 @@ Open postman and then you can import the file from the folder postman `Api Emplo
 ![Home](./Screenshots/home.png)
 
 ### Create Employee
-![Create](./Screenshots/create.png)
+![Create](./Screenshots/Form.png)
 
 ### API Testing
 ![Postman](./Screenshots/postman.png)
