@@ -19,11 +19,11 @@ export class EmployeeListComponent implements OnInit{
 
   private employeeService =inject(EmployeeService)
 
-  ngOnInit(): void {
+   ngOnInit(): void {
     this.loadEmployees();
   }
 
-  loadEmployees() {
+   loadEmployees() {
     this.employeeService.getEmployees().subscribe((data) => {
       this.employees = data;
       this.filteredEmployees = [...data]; 
@@ -47,17 +47,18 @@ export class EmployeeListComponent implements OnInit{
     this.searchId = null;
     this.filteredEmployees = [...this.employees];
     }
-  onSearchInputChange() {
+
+    onSearchInputChange() {
       if (this.searchId === null || this.searchId === undefined || this.searchId === 0) {
         this.clearSearch();
       }
     }
 
-  deleteEmployee(id: number) {
-    if (confirm('Are you sure you want to delete this employee?')) {
-      this.employeeService.deleteEmployee(id).subscribe(() => {
-        this.loadEmployees(); // mna3mel reload lal list men b3da
-      });
-     }
-   }
+    deleteEmployee(id: number) {
+      if (confirm('Are you sure you want to delete this employee?')) {
+        this.employeeService.deleteEmployee(id).subscribe(() => {
+          this.loadEmployees(); // mna3mel reload lal list men b3da
+        });
+      }
+    }
 }
