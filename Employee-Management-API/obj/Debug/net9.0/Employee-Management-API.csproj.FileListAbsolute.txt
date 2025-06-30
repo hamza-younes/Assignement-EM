@@ -160,3 +160,4 @@ C:\Users\easypc\Desktop\Assignement\Employee-Management-API\obj\Debug\net9.0\ref
 C:\Users\easypc\Desktop\Assignement\Employee-Management-API\obj\Debug\net9.0\Employee-Management-API.pdb
 C:\Users\easypc\Desktop\Assignement\Employee-Management-API\obj\Debug\net9.0\Employee-Management-API.genruntimeconfig.cache
 C:\Users\easypc\Desktop\Assignement\Employee-Management-API\obj\Debug\net9.0\ref\Employee-Management-API.dll
+C:\Users\easypc\Desktop\Assignement\Employee-Management-API\obj\Debug\net9.0\Employee-Management-API.sourcelink.json
